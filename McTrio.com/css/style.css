@@ -1,0 +1,452 @@
+/* ========== Basics ========== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: #e2e2e2;
+  color: #222;
+}
+
+h1, h2, h3 {
+  margin: 0.3em 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ========== Banner/Header ========== */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(95%);
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #111;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1.3em 2.5em;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.08);
+}
+
+.slogan {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-top: 0.5em;
+}
+
+/* ========== Middle Section: About (Black) ========== */
+.about-black {
+  background: #111;
+  color: #fff;
+  padding: 3em 0 2.5em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content-center {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.about-content-center h2 {
+  font-size: 2em;
+  margin-bottom: 0.7em;
+  letter-spacing: 1px;
+}
+
+.about-content-center p {
+  font-size: 1.1em;
+  margin-bottom: 1.3em;
+}
+
+/* See Builds Button */
+.see-builds-btn {
+  display: inline-block;
+  background: #22591c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5em 1.4em;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.15s;
+  box-shadow: 0 2px 8px rgba(32,64,32,0.12);
+}
+.see-builds-btn:hover, .see-builds-btn:focus {
+  background: #1d7422;
+  transform: scale(1.06);
+  
+}
+
+/* ========== Bottom Section: Meet the Trio ========== */
+.meet-trio {
+  background: #fff;
+  padding: 3em 0 4em 0;
+}
+
+.meet-trio h2 {
+  text-align: center;
+  margin-bottom: 2.2em;
+  font-size: 2em;
+}
+
+.trio-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2.5em;
+  flex-wrap: wrap;
+}
+
+/* Player Card */
+.player-card {
+  background: #8ae68a;
+  border-radius: 13px;
+  box-shadow: 0 2px 12px rgba(32,64,32,0.12);
+  padding: 1.6em 1.5em 1.3em 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 170px;
+  width: 200px;
+  transition: box-shadow 0.18s, transform 0.18s;
+  cursor: pointer;
+}
+.player-card:hover, .player-card:focus-within {
+  box-shadow: 0 6px 24px rgba(48,128,48,0.32);
+  transform: translateY(-6px) scale(1.045);
+}
+
+.player-pic {
+  width: 66px;
+  height: 66px;
+  margin-bottom: 0.7em;
+  border-radius: 8px;
+  background: #222;
+  object-fit: cover;
+}
+
+.player-info h3 {
+  margin-bottom: 0.3em;
+  font-size: 1.1em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.role {
+  font-size: 0.98em;
+  color: #22591c;
+  margin-bottom: 1em;
+  font-weight: 500;
+}
+
+/* About button in player card */
+.about-btn {
+  background: #22591c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.45em 1.2em;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(32,64,32,0.09);
+  transition: background 0.18s, transform 0.11s;
+  margin-top: 0.2em;
+  display: inline-block;
+  text-align: center;
+}
+.about-btn:hover, .about-btn:focus {
+  background: #1d7422;
+  transform: scale(1.07);
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 900px) {
+  .trio-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+  .banner {
+    height: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner-text {
+    padding: 0.7em 1em;
+  }
+  .about-content-center {
+    padding: 0 1em;
+  }
+  .meet-trio {
+    padding: 2em 0 2.5em 0;
+  }
+}
+/* ----------- About Page Additions ----------- */
+
+/* Header */
+.about-header {
+  background: #fff;
+  color: #22591c;
+  text-align: center;
+  padding: 2.5em 1em 1.2em 1em;
+  border-bottom: 2px solid #8ae68a;
+}
+
+.minecraft-welcome {
+  font-size: 1.1em;
+  color: #2e7d32;
+  margin-top: 0.5em;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+/* About McTrio Section */
+.about-mctrio-main {
+  background: #f8fff8;
+  color: #222;
+  max-width: 800px;
+  margin: 2em auto 2.7em auto;
+  padding: 2em 1.5em 1.2em 1.5em;
+  border-radius: 1em;
+  box-shadow: 0 2px 16px rgba(80,160,80,0.05);
+  text-align: center;
+}
+
+.about-mctrio-main h2 {
+  margin-top: 0;
+  color: #22591c;
+  font-size: 2em;
+}
+
+.about-mctrio-text {
+  font-size: 1.13em;
+  margin-bottom: 2em;
+}
+
+/* About Tiles Row */
+.about-tiles-row {
+  display: flex;
+  justify-content: center;
+  gap: 2.2em;
+  flex-wrap: wrap;
+}
+
+.about-tile {
+  background: #8ae68a;
+  border-radius: 13px;
+  box-shadow: 0 2px 10px rgba(32,64,32,0.10);
+  padding: 1.2em 1.5em 1em 1.5em;
+  min-width: 170px;
+  width: 200px;
+  text-align: center;
+  position: relative;
+  transition: box-shadow 0.18s, transform 0.18s;
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+.about-tile:hover, .about-tile:focus-within {
+  box-shadow: 0 6px 24px rgba(48,128,48,0.20);
+  transform: translateY(-6px) scale(1.045);
+}
+
+.about-tile-pic {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.7em;
+  border-radius: 8px;
+  background: #222;
+  object-fit: cover;
+}
+
+.about-tile h3 {
+  margin-bottom: 0.3em;
+  font-size: 1.1em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.about-tile .role {
+  font-size: 0.98em;
+  color: #22591c;
+  margin-bottom: 0.6em;
+  font-weight: 500;
+}
+
+.down-arrow {
+  display: inline-block;
+  background: #22591c;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  font-size: 1.5em;
+  line-height: 2em;
+  margin-top: 0.5em;
+  transition: background 0.18s, transform 0.13s;
+  box-shadow: 0 1px 4px rgba(32,64,32,0.09);
+}
+.down-arrow:hover, .down-arrow:focus {
+  background: #1d7422;
+  transform: scale(1.15);
+  text-decoration: none;
+}
+
+/* Player Section Layout */
+.player-section {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  max-width: 900px;
+  margin: 2.7em auto;
+  border-radius: 18px;
+  padding: 2.2em 2em;
+  box-shadow: 0 2px 18px rgba(80,160,80,0.07);
+}
+
+.player-green {
+  background: #eaffea;
+}
+
+.player-darkgreen {
+  background: #c4efc4;
+}
+
+.player-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.player-tile {
+  background: #8ae68a;
+  border-radius: 13px;
+  box-shadow: 0 2px 12px rgba(32,64,32,0.10);
+  padding: 1.3em 1.2em 1em 1.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 170px;
+  width: 200px;
+  text-align: center;
+}
+
+.player-pic-large {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 0.8em;
+  border-radius: 10px;
+  background: #222;
+  object-fit: cover;
+}
+
+.player-tile h3 {
+  margin-bottom: 0.3em;
+  font-size: 1.15em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.player-tile .role {
+  font-size: 1em;
+  color: #22591c;
+  margin-bottom: 0.4em;
+  font-weight: 500;
+}
+
+.player-about {
+  flex: 1;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+}
+
+.player-about h4 {
+  margin-top: 0;
+  color: #22591c;
+  font-size: 1.1em;
+  margin-bottom: 0.35em;
+}
+
+.player-about p {
+  font-size: 1.07em;
+  margin: 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 950px) {
+  .player-section {
+    padding: 1.3em 0.5em;
+    gap: 1em;
+  }
+}
+@media (max-width: 700px) {
+  .about-tiles-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3em;
+  }
+  .player-section, .player-section.reverse {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.2em 0.3em;
+    gap: 0.4em;
+  }
+  .player-about {
+    margin-top: 1em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.header-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header-buttons .btn {
+  background-color: #2ecc71; /* matching that Minecraft green */
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.header-buttons .btn:hover {
+  background-color: #27ae60; /* a bit darker on hover */
+}
+.media-squad-btn {
+  display: inline-block;
+  background-color: #2ecc71;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-left: 1rem; /* optional spacing from See Builds */
+}
+
+.medi-squad-btn:hover {
+  background-color: #27ae60;
+}
