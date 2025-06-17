@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery - Minecraft Bros</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eaffea; /* super light green */
+      color: #333;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      background-color: #2ecc71; /* Minecraft-style green */
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .gallery {
+      padding: 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      border: 2px solid #b2ffb2; /* soft green border */
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+  <h1>Our Minecraft Gallery</h1>
+  <p>Scroll through the squad’s best builds and moments.</p>
+  <div style="margin-top: 1rem;">
+    <button onclick="location.href='index.html'" style="margin-right: 1rem; padding: 0.5rem 1rem; background:#27ae60; color:white; border:none; border-radius:6px; cursor:pointer;">Home</button>
+    <button onclick="location.href='video.html'" style="padding: 0.5rem 1rem; background:#27ae60; color:white; border:none; border-radius:6px; cursor:pointer;">Video</button>
+  </div>
+</header>
+
+  <div class="gallery">
+    <img src="images/pic1.jpeg" alt="Epic base build">
+    <img src="images/pic2.png" alt="Redstone trap">
+    <img src="images/pic3.jpg" alt="Sky island">
+    <!-- Add more images like this: -->
+    <!-- <img src="images/your-next-pic.jpg" alt="Description"> -->
+  </div>
+
+</body>
+</html>
